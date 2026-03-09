@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Pixel Art Style Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-indicator"></div>
+      <div class="score-text">SCORE: <span id="score">000</span></div>
+      <div class="high-score-text">HIGH SCORE: <span id="highScore">000</span></div>
+      <div class="score-indicator"></div>
+    </div>
+    
+    <!-- Game Area with Stone Border -->
+    <div class="game-wrapper">
+        <div class="difficulty-select">
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="150">Easy</option>
+      <option value="100" selected>Medium</option>
+      <option value="70">Hard</option>
+    </select>
+  </div>
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+    
+    <!-- Grass and Dirt Area -->
+    <div class="ground-area">
+      <div class="grass"></div>
+      <div class="dirt"></div>
+    </div>
+    
+    <div class="game-controls">
+      <div class="instructions">
+        <p>Use arrow keys or WASD to control the snake</p>
+        <p>Eat the food to grow and increase your score!</p>
+      </div>
+      <button id="startBtn" class="btn">Start Game</button>
+      <button id="pauseBtn" class="btn" disabled>Pause</button>
+    </div>
+    
+    <div id="gameOver" class="game-over hidden">
+      <h2>GAME OVER!</h2>
+      <p>FINAL SCORE: <span id="finalScore">000</span></p>
+      <button id="restartBtn" class="btn">Play Again</button>
+    </div>
+  </div>
+  
+  <script src="snake.js"></script>
+</body>
+</html>
