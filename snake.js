@@ -162,6 +162,13 @@ function clearCanvas() {
   }
 }
 
+function resizeCanvas() {
+  const size = Math.min(window.innerWidth, 500);
+
+  canvas.style.width = size + "px";
+  canvas.style.height = size + "px";
+}
+
 function drawSnake(alpha = 1) {
   if (!snake?.length) return;
 
