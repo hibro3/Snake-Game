@@ -1,6 +1,16 @@
 // Game variables
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+function resizeCanvas() {
+  const size = Math.min(window.innerWidth * 0.9, 500); // 90% of screen or max 500px
+  
+  canvas.width = size;
+  canvas.height = size;
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
 const gridSize = 20;
 const tileCount = canvas.width / gridSize;
 const FOOD_SHEET = { cols: 10, rows: 6, cropPadRatio: 0.04 };
@@ -162,12 +172,7 @@ function clearCanvas() {
   }
 }
 
-function resizeCanvas() {
-  const size = Math.min(window.innerWidth, 500);
 
-  canvas.style.width = size + "px";
-  canvas.style.height = size + "px";
-}
 
 function drawSnake(alpha = 1) {
   if (!snake?.length) return;

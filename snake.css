@@ -191,19 +191,10 @@ body::before {
 }
 
 #gameCanvas {
-  outline: 3px solid rgba(0, 0, 0, 0.35);
-  outline-offset: -3px;
-}
-
-#gameCanvas {
-  border: none;
-  border-radius: 0;
-  background-color: transparent;
   display: block;
-  margin: 0 auto;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Ground Area - Grass and Dirt */
